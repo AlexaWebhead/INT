@@ -1,0 +1,145 @@
+/* main css */
+
+@import "_normalize";
+@import "colors";
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Raleway', Helvetica, sans-serif;
+}
+
+a { 
+	text-decoration: none;
+	color: $primary;
+	&:hover {
+		color: darken($primary, 5%);
+	}
+	&.lightlink {
+		color: lighten($primary, 50%);
+		&:hover {
+			color: lighten($primary, 30%);
+		}
+	}
+}
+
+header {
+	padding: 20px;
+	background: $primary;
+	border-bottom: 3px solid $white;
+	color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	h1 {
+		margin: 0;
+		font-weight: normal;
+		float: left;
+		@media (max-width: 650px) {
+			font-size: 1.15em;
+		}
+	}
+}
+#openMenu {
+	float: right;
+	color: $white;
+	font-size: 2em;
+	line-height: 1.1;
+	@media (max-width: 650px) {
+		font-size: 1.15em;
+	}
+}
+#headerMenu {
+	background: $white;
+	position: absolute;
+	top: 80px;
+	right: 0;
+	padding: 3px 6px 6px;
+	border-radius: 0 0 3px 3px;
+	display: none;
+	color: $primary;
+	@media (max-width: 650px) {
+		top: 64px;
+	}
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		list-style: none;
+		padding: 10px;
+		font-size: .8em;
+		border-radius: 3px;
+		&:hover {
+			background: $primary;
+			color: $white;
+		}
+		+ li {
+			margin-top: 3px;
+		}
+	}
+}
+
+main {
+	margin-top: 80px;
+	@media (max-width: 650px) {
+		margin-top: 64px;
+	}
+	section {
+		padding: 30px 15%;
+		@media (max-width: 650px) {
+			padding: 20px 5%;
+		}
+		i.fa {
+			float: left;
+			font-size: 80px;
+			margin: 10px;
+			@media (max-width: 650px) {
+				font-size: 30px;
+			}
+		}
+	}
+	.coverPhoto {
+		height: 100px;
+		width: 100%;
+		padding: 0;
+		background: url("../img/mountainRange_placeholder.jpg") center no-repeat;
+		background-size: cover;
+	}
+	.who {
+		background: $silver;
+	}
+	.what {
+		background: $gray;
+	}
+	.sponsorships {
+		background: $white;
+	}
+	.sectionTitle {
+		text-align: center;
+		text-transform: uppercase;
+		margin: 0 0 15px;
+	}
+	.moreLink {
+		font-weight: bold;
+	}
+}
+
+footer {
+	padding: 10px 20px;
+	background: $black;
+	color: $white;
+	font-size: .8em;
+	p {
+		display: inline-block;
+	}
+	.sponsorLink {
+		display: inline-block;
+		float: right;
+	}
+}
